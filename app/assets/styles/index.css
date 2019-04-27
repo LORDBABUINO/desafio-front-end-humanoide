@@ -1,0 +1,148 @@
+body, .header__text, h1, h3, p {
+	margin: 0;
+}
+
+.header {
+	height: 103px;
+	width: 100%;
+}
+
+.header__logo {
+	margin-top: 33px;
+	margin-left: 71px;
+}
+
+.header__text {
+	position: absolute;
+	right: 81px;
+	top: 44px;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 21px;
+	letter-spacing: 0.1em;
+}
+
+.banner {
+	background: url("../images/banner.jpg");
+	background-position: right;
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 551px;
+	width: 1440px;
+}
+
+.banner__title {
+	position: absolute;
+	width: 720px;
+	height: 57px;
+	left: 104px;
+	top: 342px;
+
+	font-family: 'Roboto', sans-serif;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 48px;
+	line-height: 56px;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+}
+
+.bold-text--black {
+	font-weight: 700;
+}
+
+.banner__subtitle {
+	position: absolute;
+	width: 364px;
+	height: 29px;
+	left: 400px;
+	top: 407px;
+
+	text-transform: uppercase;
+}
+
+.persuation__text--bold,
+.bold-text--orange {
+	font-weight: 500;
+	color: #FF6143;
+}
+
+.banner__button {
+	position: absolute;
+	left: 540px;
+	top: 471px;
+}
+
+.button {
+	height: 41px;
+	width: 221px;
+	background-color: #FF6143;
+	border-radius: 20px;
+	border: 0;
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 18px;
+	line-height: 21px;
+	text-align: center;
+	letter-spacing: 0.1em;
+
+	color: #FFFFFF;
+}
+
+.banner__confetti {
+	position: absolute;
+	width: 1432px;
+	height: 252.02px;
+	left: 0px;
+}
+.banner__confetti--top {
+	top: -13px;
+}
+
+.banner__confetti--bottom {
+	top: 520px;
+	transform: rotate(-180deg);
+}
+
+.persuation {
+	text-align: center;
+	padding-top: 72px;
+	padding-bottom: 58px;
+}
+
+.persuation__text, .banner__subtitle {
+	font-family: Roboto;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: -0.02em;
+}
+
+.persuation__text--orange {
+	color: #FF6143;
+}
+
+.gallerie {
+	text-align: center;
+	margin-top: 0px;
+	margin-bottom: 129px;
+	padding: 0;
+	list-style: none;
+}
+
+.gallerie__item {
+	display: inline-block;
+	width: 386px;
+	height: 623px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+.gallerie__img {
+	width: 386px;
+	height: 522px;
+}
