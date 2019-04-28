@@ -2,15 +2,15 @@
 	<head>
 		<meta charset="utf-8" />
 		<link rel="stylesheet" type="text/css" href="../assets/styles/index.css">
-		<link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,500,700,900" rel="stylesheet">
 	</head>
 	<body>
 		<header class="header">
-			<img class="header__logo" src="../../layout/images/logo.svg" />
+			<img class="header__logo" src="../assets/images/logo.svg" />
 			<p class="header__text">Venha ser felix no carnaval!</p>
 		</header>
 		<section class="banner">
-			<img class="banner__confetti banner__confetti--top" src="../../layout/images/confetti-banner.svg" />
+			<img class="banner__confetti banner__confetti--top" src="../assets/images/confetti-banner.svg" />
 			<h1 class="banner__title">
 				ainda dá tempo de <b class="bold-text">ser felix</b>
 			</h1>
@@ -18,7 +18,7 @@
 				fantasias premiun por <b class="bold-text--orange">$100,00</b>
 			</h3>
 			<button class="button banner__button">Comprar agora</button>
-			<img class="banner__confetti banner__confetti--bottom" src="../../layout/images/confetti-banner.svg" />
+			<img class="banner__confetti banner__confetti--bottom" src="../assets/images/confetti-banner.svg" />
 		</section>
 		<section class="persuation">
 			<p class="persuation__text">
@@ -30,15 +30,33 @@
 		<section>
 			<ul class="gallerie">
 				<li class="gallerie__item">
-					<img class="gallerie__img" src="/layout/images/fantasia-02.png" />
-				</li>
-				<li class="gallerie__item gallerie__item--hover">
-					<img class="gallerie__img" src="/layout/images/fantasia-01.png" />
-				</li>
-				<li class="gallerie__item">
-					<img class="gallerie__img" src="/layout/images/fantasia-03.png" />
+					<img class="gallerie__img" src="../assets/images/fantasia-02.png" />
+				</li><!--
+		 --><li class="gallerie__item gallerie__item--hover">
+					<img class="gallerie__img" src="../assets/images/fantasia-01.png" />
+					<p class="gallerie__price">
+						de
+						<span class="gallerie__price--line">R$200</span>
+						por
+						<b class="gallerie__price--orange">R$100</b>
+					</p>
+					<button class="button gallerie__button">Mais detalhes</button>
+				</li><!--
+		 --><li class="gallerie__item">
+					<img class="gallerie__img" src="../assets/images/fantasia-03.png" />
 				</li>
 			</ul>
 		</section>
+		<section class="contact">
+			<h1 class="contact__logo"><b class="contact__logo--bold">Carna</b>Store</h1>
+			<p class="contact__email">contato@carnastore.com</p>
+		</section>
+		<section class="icons">
+			<img class="icons--cards" src="../assets/images/cards.svg">
+			<img class="icons--security" src="../assets/images/security-icon.svg">
+		</section>
+		<footer class="footer">
+			<p class="footer__text">Desenvolvido pela <b class="footer__text--bold">Humanoide</b></p>
+		</footer>
 	</body>
 </html>
