@@ -243,12 +243,12 @@ body, .header__text, h1, h3, p {
 }
 
 .footer {
-	height: 92px;
 	text-align: center;
+	padding-top: 32px;
+	padding-bottom: 43px;
 }
 
 .footer__text {
-	margin-top: 32px;
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 300;
