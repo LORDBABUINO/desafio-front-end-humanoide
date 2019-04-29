@@ -158,6 +158,14 @@ body, .header__text, h1, h3, p {
 	margin-left: 20px;
 }
 
+.gallerie__item--hover > p {
+	display: block;
+}
+
+.gallerie__item--hover > button {
+	display: inline-block;
+}
+
 .gallerie__item--hover {
 	border: 1px solid rgba(0, 0, 0, 0.17);
 	box-sizing: border-box;
@@ -176,6 +184,7 @@ body, .header__text, h1, h3, p {
 	vertical-align: top;
 	margin-top: 26px;
 	margin-bottom: 13px;
+	display: none;
 }
 
 .gallerie__price--orange {
@@ -185,6 +194,10 @@ body, .header__text, h1, h3, p {
 
 .gallerie__price--line {
 	text-decoration: line-through;
+}
+
+.gallerie__button {
+	display: none
 }
 
 .contact {
@@ -220,7 +233,6 @@ body, .header__text, h1, h3, p {
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 16px;
-	/* identical to box height */
 	letter-spacing: 0.1em;
 
 	color: #FFFFFF;
