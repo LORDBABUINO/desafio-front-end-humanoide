@@ -18,3 +18,15 @@ gallerieItemList.map((item, index) => {
 		document.querySelector(`.details--${index}`).classList.add('details--enabled')
 	})
 })
+
+const sizeRadioList = Array.from(
+	document.getElementsByClassName('details__size-radio')
+)
+
+sizeRadioList.map((radio) => {
+	radio.addEventListener('click', () => {
+		const active = document.querySelector('.details__size-radio--active')
+		active && active.classList.toggle('details__size-radio--active')
+		radio.classList.toggle('details__size-radio--active')
+	})
+})
