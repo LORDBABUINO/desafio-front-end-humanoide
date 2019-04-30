@@ -30,3 +30,27 @@ sizeRadioList.map((radio) => {
 		radio.classList.toggle('details__size-radio--active')
 	})
 })
+
+const detailsButton = document.querySelector('.details__button')
+
+detailsButton.addEventListener('click', () => {
+	document.querySelector('.notification').classList.toggle('notification--active')
+})
+
+const notificationButtonContinue = document.querySelector('.notification__button--continue')
+
+notificationButtonContinue.addEventListener('click', () => {
+	detailsButton.click()
+})
+
+const notification = document.querySelector('.notification')
+
+notification.addEventListener('click', () => {
+	detailsButton.click()
+})
+
+const notificationModal = document.querySelector('.notification__modal')
+
+notificationModal.addEventListener('click', (event) => {
+	event.stopPropagation()
+})
