@@ -276,15 +276,11 @@ body, .header__text, h1, h3, p {
 }
 
 .details {
-	display: none;
+	display: block;
 	margin: auto;
 	width: 954px;
 	background: #E5E5E5;
 	/*background: #efedef*/
-}
-
-.details--enabled {
-	display: block;
 }
 
 .details__image {

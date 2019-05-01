@@ -54,8 +54,73 @@
 			galleryItem.querySelector('button').addEventListener('click', () => {
 				window.scrollTo(0,0)
 				document.querySelector('.banner').classList.add('banner--disabled')
-				document.querySelector('.details--1').classList.add('details--enabled')
+				renderDetails(product)
 			})
+		})
+	}
+
+	const renderDetails = (product) => {
+		const body = document.querySelector('body')
+		const banner = document.querySelector('.banner')
+		const details = document.createElement('section')
+		const detailsImage = document.createElement('img')
+		const detailsArticle = document.createElement('div')
+		const detailsTitle = document.createElement('h2')
+		const detailsDescription = document.createElement('p')
+		const detailsPrice = document.createElement('p')
+		const detailsPriceBold = document.createElement('b')
+		const detailsSizeLabel = document.createElement('label')
+		const detailsSizeRadio = document.createElement('button')
+		const detailsButton = document.createElement('button')
+		const strike = document.createElement('strike')
+
+		detailsImage.setAttribute('src', product.image)
+
+		details.classList.add('details')
+		detailsImage.classList.add('details__image')
+		detailsArticle.classList.add('details__article')
+		detailsTitle.classList.add('details__title')
+		detailsDescription.classList.add('details__description')
+		detailsPrice.classList.add('details__price')
+		detailsPriceBold.classList.add('details__price--bold')
+		detailsSizeLabel.classList.add('details__size-label')
+		detailsSizeRadio.classList.add('details__size-radio')
+		detailsButton.classList.add('button')
+		detailsButton.classList.add('details__button')
+
+		detailsTitle.innerHTML = product.title
+		detailsDescription.innerHTML = product.description
+		detailsSizeLabel.innerHTML = 'Escolha o tamanho'
+		detailsButton.innerHTML = 'Adicionar ao carrinho'
+
+		detailsPriceBold.innerHTML = 'R$ ' + parseFloat(
+			product.promotional_price
+				? product.promotional_price
+				: product.price
+		)
+
+		product.price && product.promotional_price && (() => {
+			const strike = document.createElement('strike')
+			strike.innerHTML = 'R$' + product.price
+			detailsPrice.innerHTML += 'de '
+			detailsPrice.appendChild(strike)
+			detailsPrice.innerHTML += ' '
+		})()
+
+		detailsPrice.innerHTML += 'por '
+		detailsPrice.appendChild(detailsPriceBold)
+
+		detailsArticle.appendChild(detailsTitle)
+		detailsArticle.appendChild(detailsDescription)
+		detailsArticle.appendChild(detailsPrice)
+		detailsArticle.appendChild(detailsSizeLabel)
+		detailsArticle.appendChild(detailsButton)
+		details.appendChild(detailsImage)
+		details.appendChild(detailsArticle)
+		body.insertBefore(details, banner)
+
+		detailsButton.addEventListener('click', () => {
+			document.querySelector('.notification').classList.toggle('notification--active')
 		})
 	}
 

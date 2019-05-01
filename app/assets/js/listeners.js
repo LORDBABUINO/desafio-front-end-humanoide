@@ -38,12 +38,6 @@
 		})
 	})
 
-	const detailsButton = document.querySelector('.details__button')
-
-	detailsButton.addEventListener('click', () => {
-		document.querySelector('.notification').classList.toggle('notification--active')
-	})
-
 	const notificationButtonContinue = document.querySelector('.notification__button--continue')
 
 	notificationButtonContinue.addEventListener('click', () => {
