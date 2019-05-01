@@ -62,6 +62,12 @@ productList.map((product) => {
 
 //EVENTS
 
+const bannerButton = document.querySelector('.banner__button')
+
+bannerButton.addEventListener('click', () => {
+		window.scrollTo(0, 800)
+})
+
 const gallerieItemList = Array.from(
 	document.getElementsByClassName('gallerie__item')
 )
