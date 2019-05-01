@@ -132,29 +132,31 @@ body, .header__text, h1, h3, p {
 	color: #FF6143;
 }
 
-.gallerie {
+.gallery {
+	height: 752px;
 	text-align: center;
 	margin-top: 0px;
-	margin-bottom: 129px;
 	padding: 0;
 	list-style: none;
+	overflow-y: scroll;
 }
 
-.gallerie__item {
+.gallery__item {
 	display: inline-block;
 	width: 386px;
 	height: 623px;
 	margin-left: 30px;
 	margin-right: 30px;
 	vertical-align: top;
+	margin-bottom: 129px;
 }
 
-.gallerie__img {
+.gallery__img {
 	width: 386px;
 	height: 522px;
 }
 
-.gallerie__item--hover > img {
+.gallery__item--hover > img {
 	width: 345px;
 	height: 474px;
 	margin-top: 20px;
@@ -162,15 +164,15 @@ body, .header__text, h1, h3, p {
 	margin-left: 20px;
 }
 
-.gallerie__item--hover > p {
+.gallery__item--hover > p {
 	display: block;
 }
 
-.gallerie__item--hover > button {
+.gallery__item--hover > button {
 	display: inline-block;
 }
 
-.gallerie__item--hover {
+.gallery__item--hover {
 	border: 1px solid rgba(0, 0, 0, 0.17);
 	box-sizing: border-box;
 	box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
@@ -178,7 +180,7 @@ body, .header__text, h1, h3, p {
 	margin-right: 29px;
 }
 
-.gallerie__price {
+.gallery__price {
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 300;
@@ -191,16 +193,16 @@ body, .header__text, h1, h3, p {
 	display: none;
 }
 
-.gallerie__price--orange {
+.gallery__price--orange {
 	font-weight: 500;
 	color: #FF6143;
 }
 
-.gallerie__price--line {
+.gallery__price--line {
 	text-decoration: line-through;
 }
 
-.gallerie__button {
+.gallery__button {
 	display: none
 }
 
