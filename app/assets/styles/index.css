@@ -312,6 +312,7 @@ body, .header__text, h1, h3, p {
 }
 
 .details__description {
+	height: 54px;
 	margin-left: 2px;
 	font-family: Roboto;
 	font-style: normal;
@@ -319,6 +320,7 @@ body, .header__text, h1, h3, p {
 	font-size: 13px;
 	line-height: 18px;
 	letter-spacing: 0.1em;
+	overflow-y: scroll;
 
 	color: #565656;
 }

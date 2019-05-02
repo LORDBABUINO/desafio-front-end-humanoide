@@ -52,8 +52,11 @@
 			})
 
 			galleryItem.querySelector('button').addEventListener('click', () => {
+				const details = document.querySelector('.details')
 				window.scrollTo(0,0)
 				document.querySelector('.banner').classList.add('banner--disabled')
+				details && (details.parentElement.removeChild(details))
+
 				renderDetails(product)
 			})
 		})
@@ -70,7 +73,6 @@
 		const detailsPrice = document.createElement('p')
 		const detailsPriceBold = document.createElement('b')
 		const detailsSizeLabel = document.createElement('label')
-		const detailsSizeRadio = document.createElement('button')
 		const detailsButton = document.createElement('button')
 		const strike = document.createElement('strike')
 
@@ -84,7 +86,6 @@
 		detailsPrice.classList.add('details__price')
 		detailsPriceBold.classList.add('details__price--bold')
 		detailsSizeLabel.classList.add('details__size-label')
-		detailsSizeRadio.classList.add('details__size-radio')
 		detailsButton.classList.add('button')
 		detailsButton.classList.add('details__button')
 
@@ -97,7 +98,7 @@
 			product.promotional_price
 				? product.promotional_price
 				: product.price
-		)
+		).toFixed(2).replace('.', ',')
 
 		product.price && product.promotional_price && (() => {
 			const strike = document.createElement('strike')
@@ -114,6 +115,20 @@
 		detailsArticle.appendChild(detailsDescription)
 		detailsArticle.appendChild(detailsPrice)
 		detailsArticle.appendChild(detailsSizeLabel)
+
+		product.sizes.map((size) => {
+			const detailsSizeRadio = document.createElement('button')
+			detailsSizeRadio.classList.add('button')
+			detailsSizeRadio.classList.add('details__size-radio')
+			detailsSizeRadio.innerHTML = size
+			detailsSizeRadio.addEventListener('click', () => {
+				const active = document.querySelector('.details__size-radio--active')
+				active && active.classList.toggle('details__size-radio--active')
+				detailsSizeRadio.classList.toggle('details__size-radio--active')
+			})
+			detailsArticle.appendChild(detailsSizeRadio)
+		})
+
 		detailsArticle.appendChild(detailsButton)
 		details.appendChild(detailsImage)
 		details.appendChild(detailsArticle)
