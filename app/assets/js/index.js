@@ -32,10 +32,9 @@
 				strike.innerHTML = 'R$' + product.price
 				galleryPrice.innerHTML += 'de '
 				galleryPrice.appendChild(strike)
-				galleryPrice.innerHTML += ' '
+				galleryPrice.innerHTML += ' por '
 			})()
 
-			galleryPrice.innerHTML += 'por '
 			galleryPrice.appendChild(galleryPriceOrange)
 
 			galleryItem.appendChild(galleryImg)
@@ -44,11 +43,15 @@
 			gallery.appendChild(galleryItem)
 
 			galleryItem.addEventListener('mouseenter', () => {
-				galleryItem.classList.toggle('gallery__item--hover')
+				window.innerWidth > 900 && (
+					galleryItem.classList.add('gallery__item--hover')
+				)
 			})
 
 			galleryItem.addEventListener('mouseleave', () => {
-				galleryItem.classList.toggle('gallery__item--hover')
+				window.innerWidth > 900 && (
+					galleryItem.classList.remove('gallery__item--hover')
+				)
 			})
 
 			galleryItem.querySelector('button').addEventListener('click', () => {
@@ -105,10 +108,9 @@
 			strike.innerHTML = 'R$' + product.price
 			detailsPrice.innerHTML += 'de '
 			detailsPrice.appendChild(strike)
-			detailsPrice.innerHTML += ' '
+			detailsPrice.innerHTML += ' por '
 		})()
 
-		detailsPrice.innerHTML += 'por '
 		detailsPrice.appendChild(detailsPriceBold)
 
 		detailsArticle.appendChild(detailsTitle)

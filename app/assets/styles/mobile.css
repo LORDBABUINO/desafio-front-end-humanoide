@@ -100,7 +100,7 @@
 
 @media (max-width: 900px) {
 	.gallery {
-		height: 579px;
+		max-height: 579px;
 	}
 	
 	.gallery__item {

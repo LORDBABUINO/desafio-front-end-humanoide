@@ -31,6 +31,7 @@ body, .header__text, h1, h3, p {
 	background-repeat: no-repeat;
 	height: 551px;
 	width: 1440px;
+	overflow: hidden;
 }
 
 .banner--disabled {
@@ -133,7 +134,7 @@ body, .header__text, h1, h3, p {
 }
 
 .gallery {
-	height: 752px;
+	max-height: 752px;
 	text-align: center;
 	margin-top: 0px;
 	padding: 0;
