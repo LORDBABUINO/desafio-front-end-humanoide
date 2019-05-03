@@ -96,11 +96,17 @@
 		line-height: 16px;
 		letter-spacing: 0.1em;
 	}
+
+	.footer{
+		padding-top: 31px;
+		padding-bottom: 40px;
+	}
 }
 
 @media (max-width: 900px) {
 	.gallery {
-		max-height: 579px;
+		max-height: 596px;
+		margin-bottom: 21px;
 	}
 	
 	.gallery__item {
@@ -131,5 +137,39 @@
 
 		font-size: 11px;
 		line-height: 13px;
+	}
+}
+
+@media (max-width: 600px) {
+	.contact {
+		text-align: center;
+	}
+	.contact__logo {
+		margin-top: 145px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.contact__email {
+		float: none;
+		margin-right: 0;
+		margin-top: 5px;
+	}
+}
+
+@media (max-width: 400px) {
+	.icons {
+		height: 176px;
+		display: flex;
+		flex-flow: column;
+	}
+	.icons--cards {
+		order: 2;
+		margin-top: 36px;
+		margin-left: 0;
+	}
+	.icons--security {
+		order: 1;
+		margin-top: 32px;
+		margin-right: 0;
 	}
 }
