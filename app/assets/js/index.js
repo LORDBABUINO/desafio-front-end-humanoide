@@ -94,7 +94,7 @@
 
 		detailsTitle.innerHTML = product.title
 		detailsDescription.innerHTML = product.description
-		detailsSizeLabel.innerHTML = 'Escolha o tamanho'
+		detailsSizeLabel.innerHTML = 'Esolha o tamanho'
 		detailsButton.innerHTML = 'Adicionar ao carrinho'
 
 		detailsPriceBold.innerHTML = 'R$ ' + parseFloat(
