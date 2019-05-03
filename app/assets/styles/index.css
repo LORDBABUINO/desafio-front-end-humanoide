@@ -282,12 +282,14 @@ body, .header__text, h1, h3, p {
 	width: 954px;
 	background: #E5E5E5;
 	/*background: #efedef*/
+	overflow: hidden;
 }
 
 .details__image {
 	display: inline-block;
 	height: 562px;
 	width: 419px;
+	float: left;
 }
 
 .details__article {
@@ -295,7 +297,13 @@ body, .header__text, h1, h3, p {
 	width: 461px;
 	margin-top: 125px;
 	margin-left: 70px;
+	margin-bottom: 42px;
 	vertical-align: top;
+}
+
+.details__buy-choice {
+	display: inline-block;
+	margin-left: 71px;
 }
 
 .details__title {
@@ -328,7 +336,6 @@ body, .header__text, h1, h3, p {
 
 .details__price {
 	margin-top: 18px;
-	margin-bottom: 42px;
 	font-family: Roboto;
 	font-style: normal;
 	font-weight: 300;
@@ -344,7 +351,6 @@ body, .header__text, h1, h3, p {
 
 .details__size-label {
 	display: block;
-	margin-left: 1px;
 	margin-bottom: 14px;
 
 	font-family: Roboto;
@@ -360,8 +366,8 @@ body, .header__text, h1, h3, p {
 	width: 60px;
 	height: 60px;
 	border-radius: 50%;
-	margin-left: 2px;
-	margin-right: 19px;
+	margin-left: 1px;
+	margin-right: 20px;
 	background-color: white;
 	border: 1px solid #FF6143;
 	color: black;
@@ -376,9 +382,10 @@ body, .header__text, h1, h3, p {
 }
 
 .details__button {
+	display: block;
 	width: 303px;
 	margin-top: 58px;
-	margin-left: 3px;
+	margin-left: 2px;
 }
 
 .details__size-radio--active {

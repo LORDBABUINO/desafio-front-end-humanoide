@@ -71,6 +71,7 @@
 		const details = document.createElement('section')
 		const detailsImage = document.createElement('img')
 		const detailsArticle = document.createElement('div')
+		const detailsBuyChoice = document.createElement('div')
 		const detailsTitle = document.createElement('h2')
 		const detailsDescription = document.createElement('p')
 		const detailsPrice = document.createElement('p')
@@ -84,6 +85,7 @@
 		details.classList.add('details')
 		detailsImage.classList.add('details__image')
 		detailsArticle.classList.add('details__article')
+		detailsBuyChoice.classList.add('details__buy-choice')
 		detailsTitle.classList.add('details__title')
 		detailsDescription.classList.add('details__description')
 		detailsPrice.classList.add('details__price')
@@ -116,7 +118,7 @@
 		detailsArticle.appendChild(detailsTitle)
 		detailsArticle.appendChild(detailsDescription)
 		detailsArticle.appendChild(detailsPrice)
-		detailsArticle.appendChild(detailsSizeLabel)
+		detailsBuyChoice.appendChild(detailsSizeLabel)
 
 		product.sizes.map((size) => {
 			const detailsSizeRadio = document.createElement('button')
@@ -128,12 +130,13 @@
 				active && active.classList.toggle('details__size-radio--active')
 				detailsSizeRadio.classList.toggle('details__size-radio--active')
 			})
-			detailsArticle.appendChild(detailsSizeRadio)
+			detailsBuyChoice.appendChild(detailsSizeRadio)
 		})
 
-		detailsArticle.appendChild(detailsButton)
+		detailsBuyChoice.appendChild(detailsButton)
 		details.appendChild(detailsImage)
 		details.appendChild(detailsArticle)
+		details.appendChild(detailsBuyChoice)
 		body.insertBefore(details, banner)
 
 		detailsButton.addEventListener('click', () => {
