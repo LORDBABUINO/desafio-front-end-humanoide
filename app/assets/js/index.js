@@ -151,6 +151,8 @@
 		details.offsetWidth <= 980 && (
 				document.querySelector('.gallery').classList.add('gallery--small')
 		)
+
+		document.querySelector('.persuation__text').innerHTML = 'Outras fantasias que vc vai gostar'
 	}
 
 
