@@ -43,13 +43,13 @@
 			gallery.appendChild(galleryItem)
 
 			galleryItem.addEventListener('mouseenter', () => {
-				window.innerWidth > 900 && (
+				window.innerWidth > 980 && (
 					galleryItem.classList.add('gallery__item--hover')
 				)
 			})
 
 			galleryItem.addEventListener('mouseleave', () => {
-				window.innerWidth > 900 && (
+				window.innerWidth > 980 && (
 					galleryItem.classList.remove('gallery__item--hover')
 				)
 			})
@@ -142,7 +142,17 @@
 		detailsButton.addEventListener('click', () => {
 			document.querySelector('.notification').classList.toggle('notification--active')
 		})
+
+		details.addEventListener('resize', () => {
+			details.offsetWidth == 980 &&
+				document.querySelector('.gallery').classList.toggle('gallery--small')
+		})
+
+		details.offsetWidth <= 980 && (
+				document.querySelector('.gallery').classList.add('gallery--small')
+		)
 	}
+
 
 	const http = new XMLHttpRequest()
 
