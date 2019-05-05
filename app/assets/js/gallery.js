@@ -1,3 +1,4 @@
+import Details from './details.js'
 class Gallery extends HTMLUListElement {
 	constructor() {
 		super()
@@ -71,94 +72,12 @@ class Gallery extends HTMLUListElement {
 		return ['products']
 	}
 
-	renderDetails (product) {
+	renderDetails(product) {
 		const body = document.querySelector('body')
-		const banner = document.querySelector('.banner')
-		const details = document.createElement('section')
-		const detailsImage = document.createElement('img')
-		const detailsArticle = document.createElement('div')
-		const detailsBuyChoice = document.createElement('div')
-		const detailsTitle = document.createElement('h2')
-		const detailsDescription = document.createElement('p')
-		const detailsPrice = document.createElement('p')
-		const detailsPriceBold = document.createElement('b')
-		const detailsSizeLabel = document.createElement('label')
-		const detailsButton = document.createElement('button')
-		const strike = document.createElement('strike')
-
-		detailsImage.setAttribute('src', product.image)
-
-		details.classList.add('details')
-		detailsImage.classList.add('details__image')
-		detailsArticle.classList.add('details__article')
-		detailsBuyChoice.classList.add('details__buy-choice')
-		detailsTitle.classList.add('details__title')
-		detailsDescription.classList.add('details__description')
-		detailsPrice.classList.add('details__price')
-		detailsPriceBold.classList.add('details__price--bold')
-		detailsSizeLabel.classList.add('details__size-label')
-		detailsButton.classList.add('button')
-		detailsButton.classList.add('details__button')
-
-		detailsTitle.innerHTML = product.title
-		detailsDescription.innerHTML = product.description
-		detailsSizeLabel.innerHTML = 'Esolha o tamanho'
-		detailsButton.innerHTML = 'Adicionar ao carrinho'
-
-		detailsPriceBold.innerHTML = 'R$ ' + parseFloat(
-			product.promotional_price
-				? product.promotional_price
-				: product.price
-		).toFixed(2).replace('.', ',')
-
-		product.price && product.promotional_price && (() => {
-			const strike = document.createElement('strike')
-			strike.innerHTML = 'R$' + product.price
-			detailsPrice.innerHTML += 'de '
-			detailsPrice.appendChild(strike)
-			detailsPrice.innerHTML += ' por '
-		})()
-
-		detailsPrice.appendChild(detailsPriceBold)
-
-		detailsArticle.appendChild(detailsTitle)
-		detailsArticle.appendChild(detailsDescription)
-		detailsArticle.appendChild(detailsPrice)
-		detailsBuyChoice.appendChild(detailsSizeLabel)
-
-		product.sizes.map((size) => {
-			const detailsSizeRadio = document.createElement('button')
-			detailsSizeRadio.classList.add('button')
-			detailsSizeRadio.classList.add('details__size-radio')
-			detailsSizeRadio.innerHTML = size
-			detailsSizeRadio.addEventListener('click', () => {
-				const active = document.querySelector('.details__size-radio--active')
-				active && active.classList.toggle('details__size-radio--active')
-				detailsSizeRadio.classList.toggle('details__size-radio--active')
-			})
-			detailsBuyChoice.appendChild(detailsSizeRadio)
-		})
-
-		detailsBuyChoice.appendChild(detailsButton)
-		details.appendChild(detailsImage)
-		details.appendChild(detailsArticle)
-		details.appendChild(detailsBuyChoice)
-		body.insertBefore(details, banner)
-
-		detailsButton.addEventListener('click', () => {
-			document.querySelector('.notification').classList.toggle('notification--active')
-		})
-
-		details.addEventListener('resize', () => {
-			details.offsetWidth == 980 &&
-				document.querySelector('.gallery').classList.toggle('gallery--small')
-		})
-
-		details.offsetWidth <= 980 && (
-				document.querySelector('.gallery').classList.add('gallery--small')
-		)
-
-		document.querySelector('.persuation__text').innerHTML = 'Outras fantasias que vc vai gostar'
+		const persuation = document.querySelector('.persuation')
+		const details = document.createElement('div', { is: 'details-carnastore' })
+		details.setAttribute('product', JSON.stringify(product))
+		body.insertBefore(details, persuation)
 	}
 }
 
